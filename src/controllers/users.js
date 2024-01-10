@@ -6,8 +6,9 @@ const registerNewUser  = (req, res)=> {
 }
 
 
-const getAllUsers  = (req, res)=> {
-    const users = User.find()
+const getAllUsers  = async(req, res)=> {
+    const users = await User.find()
+    res.json({users})
 }
 
 
